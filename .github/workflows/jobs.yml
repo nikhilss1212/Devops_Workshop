@@ -23,18 +23,18 @@ jobs:
      matrix:
        version: [10,12,14]
        os: [ubuntu-latest,windows.macOS-latest]
-    runs-on: ${{matrix.os}}  
-    steps:
+   runs-on: ${{matrix.os}}  
+   steps:
      - run: ./server.sh
   job3:
     needs: job2
-   strategy:
+    strategy:
      matrix:
        version: [10,12,14]
        os: [ubuntu-latest,windows.macOS-latest]
     runs-on: ${{matrix.os}}
     steps:
-     -run: echo "JOB3 RUNS IF JOB2 IS SUCCESSFULL"
+      - run: echo "JOB3 RUNS IF JOB2 IS SUCCESSFULL"
   job4:
     if : always()
     needs: job2

@@ -32,9 +32,9 @@ jobs:
           path: ./build
   deploy: 
    name: deploy
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
+   needs: build
+   runs-on: ubuntu-latest
+  steps:
       - name: Downloading Artifacts
         uses: actions/download-artifact@v3
         with:

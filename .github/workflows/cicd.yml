@@ -5,9 +5,9 @@ on:
  workflow_dispatch:
 defaults:
  run:
-  working_directory: ./
+  working-directory: ./
 jobs:
-  Build:
+  build:
    name: build
    runs-on: UBUNTU-latest
    
